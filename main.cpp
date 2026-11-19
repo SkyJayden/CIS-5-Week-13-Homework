@@ -1,31 +1,41 @@
 #include <iostream>
 #include <string>
 
-// Practice 13 · Part 1 — Your Name
+using std::string;
+using std::cout;
+using std::cin;
+using std::endl;
+
+// Practice 13 · Part 1 — Jayden MB
 // CIS 5 Week 13 · Word tools
 
-std::string banner(const std::string& name) {
-  // TODO: return "Hello, " + name + "!"
-  return name;
+string banner(const string& name) {
+	// TODO: return "Hello, " + name + "!"
+	return "Hello, " + name + "!";
 }
 
-std::string initials(const std::string& first, const std::string& last) {
-  std::string out = "";
-  // TODO: if first.size() > 0, add first[0] to out
-  // TODO: if last.size() > 0, add last[0] to out
-  return out;
+string initials(const string& first, const string& last) {
+	string out = "";
+	if (first.size() > 0) {
+		out += first[0];
+	}
+	if (last.size() > 0) {
+		out += last[0];
+	}
+	return out;
 }
 
-int main() {
-  std::string first, last;
-  std::cout << "First: ";
-  std::cin >> first;
-  std::cout << "Last: ";
-  std::cin >> last;
+int main() {		
+	string first, last;
+	cout << "First: ";
+	cin >> first;
+	cout << "Last: ";
+	cin >> last;
 
-  std::string full = first + " " + last;
-  // TODO: print banner(full)
-  // TODO: print "Length: " and full.size()
-  // TODO: print "Initials: " and initials(first, last)
-  return 0;
-}
+	string full = first + " " + last;
+	cout << banner(full) << endl;
+	cout << "Length: " << full.size() << endl;
+	cout << "Initials: " << initials(first, last) << endl;
+
+	return 0;
+} 
